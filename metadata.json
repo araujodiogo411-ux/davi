@@ -1,0 +1,5 @@
+{
+  "name": "GeoBook Creator",
+  "description": "An educational tool that generates a detailed Geography textbook PDF with AI-generated illustrations.",
+  "requestFramePermissions": []
+}

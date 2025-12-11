@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoBook Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom font classes for the textbook feel */
+      .font-header { font-family: 'Montserrat', sans-serif; }
+      .font-body { font-family: 'Roboto', sans-serif; }
+      
+      /* PDF Container specific rendering */
+      /* A4 dimensions at 96 DPI: 794px x 1123px */
+      .pdf-page {
+        width: 794px;
+        height: 1123px;
+        margin: 0 auto;
+        background: white;
+        overflow: hidden;
+        position: relative;
+        /* Ensure no page break inside the container during print preview logic */
+        page-break-after: always;
+        flex-shrink: 0;
+      }
+
+      /* Specific adjustments for html2canvas fidelity */
+      .print-exact {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.1",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "jspdf": "https://esm.sh/jspdf@^3.0.4",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-200 text-gray-800">
+    <div id="root"></div>
+  </body>
+</html>
